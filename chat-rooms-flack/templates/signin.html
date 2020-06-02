@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h4>Enter your username!</h4>
+  <form action="/signin" method="POST">
+    <input type="text" class="form-control" id="username" name="username" autofocus autocomplete="off" placeholder="Username">
+    <button class="btn btn-primary" type="submit">Sign In</button>
+  </form>
+{% endblock %}

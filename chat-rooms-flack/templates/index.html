@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+
+{% block head %}
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+{% endblock %}
+
+
+{% block content %}
+  <h1>Welcome</h1>
+  <h2>{{ session.username }}</h2>
+  <h2>Create a channel or join to existed one</h2>
+    <form action="/create" method="post">
+      <input type="text" class="form-control" name="channel" id="channel" autofocus>
+      <button class="btn btn-primary" type="submit">Create</button>
+    </form>
+
+    <script>
+
+        if (localStorage.getItem('last_channel')) {
+            // Redirect to last channel
+          let channel = localStorage.getItem('last_channel');
+          window.location.replace('/channels/' + channel);
+        }
+
+    </script>
+{% endblock %}
