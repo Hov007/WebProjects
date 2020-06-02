@@ -1,0 +1,30 @@
+#myAlert {
+  background: #f76880;
+  opacity: 0.9;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  border-radius: 10px 10px 10px 10px;
+  width: 300px;
+  height: 30px
+
+}
+
+strong {
+  position: relative;
+  top: 20%;
+  left: 5%;
+  color: #8c1c2f;
+}
+
+a {
+  color: #8c1c2f;
+}
+<h1 class="i">Title</h1>
+<h1 class="t">Author</h1>
+{% for d in data %}
+
+  <p><a href="#">{{ d.title }}</p></a>
+  <p><a href="#">{{ d.author }}</p></a>
+  <p><a href="#">{{ d.year }}</p></a>
+{% endfor %}
